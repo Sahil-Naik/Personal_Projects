@@ -6,11 +6,7 @@ import webbrowser as wb
 import requests
 import time
 
-
-# Last edited on 10-March-2022 at 4:13 PM.
-
-# Code block to display current time
-
+# Last edited on 10-March-2022 at 8:00 PM.
 
 api_key = "0af67e362c2930a36cacadc49254293d"
 base_url = "http://api.openweathermap.org/data/2.5/forecast?"
@@ -37,8 +33,6 @@ def about_win():
     go_back = tk.Button(about, text='Go Back', command=back_to_main).pack()
     about.mainloop()
 
-
-
 def visit_web(url='https://sahil7naik57.wixsite.com/upturn-io'):
     wb.open(url)
 
@@ -52,10 +46,9 @@ def weather_win():
 
 
     forecast = tk.Toplevel()
-    forecast.geometry("1024x768")
+    forecast.geometry("1024x768+300+50")
     forecast.title("Weather Forecast")
     forecast.resizable(False, False)
-    forecast.wm_attributes('-alpha', 0.98)
     icon_f = tk.PhotoImage(master=forecast,file='pics\\logo.png')
     forecast.iconphoto(False, icon_f)
     background_forecast = tk.PhotoImage(master=forecast,file='pics\\weather_bg2.png')
@@ -76,11 +69,7 @@ def weather_win():
             time1 = time2
             time_lab.config(text=time2)
         time_lab.after(200, tick)
-
     tick()
-
-
-
 
     def clicked_search():
         region = get_region_as_text.get()
@@ -162,17 +151,164 @@ def weather_win():
         root.iconify()
         root.deiconify()
 
-    back_to_main = tk.Button(forecast, text="Back", font=('Arial', 13, 'bold'), command=forecast_to_main)
+    back_to_main = tk.Button(forecast, text="Back", font=('Bahnshcrift', 13, 'bold'), command=forecast_to_main)
     back_to_main.place(x=935, y=720, width=65)
     forecast.mainloop()
+
+def emission_win():
+    def open_my_climate(url='https://sahil7naik57.wixsite.com/upturn-io/general-6'):
+        wb.open(url)
+
+    def clicked_ge20():
+        back_to_main.destroy()
+        global_emit_2017.config(state='disabled')
+        global_Gemit_2017.config(state='disabled')
+        global_Gemit_20ys.config(state='disabled')
+        big_manufac.config(state='disabled')
+        learn_more.config(state='disabled')
+
+        def back_to_emit():
+            emit.destroy()
+            emission_win()
+
+        # Option 1 functions
+
+
+        op1_head = tk.Label(emit, text="Global Emission over past 20 years", font=('Bahnshcrift', 25), justify='center', bg='black', fg='orange')
+        op1_head.place(x=355, y=0, width=670, height=70)
+
+        op1_back = tk.Button(emit, text="Back", font=('Bahnshcrift', 13, 'bold'), command=back_to_emit, bg='black', bd=0, fg='white')
+        op1_back.place(x=675, y=730, width=65)
+
+
+    def clicked_ge17():
+        back_to_main.destroy()
+        global_emit_20ys.config(state='disabled')
+        global_Gemit_2017.config(state='disabled')
+        global_Gemit_20ys.config(state='disabled')
+        big_manufac.config(state='disabled')
+        learn_more.config(state='disabled')
+
+        def back_to_emit():
+            emit.destroy()
+            emission_win()
+        # Option 2 functions
+        op2_stats_lab = tk.Label(emit).place(x=355,y=70,width=675,height=698)
+        op2_head = tk.Label(emit, text="Global Emission in 2017", font=('Bahnshcrift', 25), justify='center', bg='black', fg='orange')
+        op2_head.place(x=355, y=0, width=670, height=70)
+
+        op2_back = tk.Button(emit, text="Back", font=('Bahnshcrift', 13, 'bold'), command=back_to_emit, bg='black', bd=0, fg='white')
+        op2_back.place(x=675, y=730, width=65)
+
+    def clicked_Gge20():
+        back_to_main.destroy()
+        global_emit_20ys.config(state='disabled')
+        global_Gemit_2017.config(state='disabled')
+        global_emit_2017.config(state='disabled')
+        big_manufac.config(state='disabled')
+        learn_more.config(state='disabled')
+        def back_to_emit():
+            emit.destroy()
+            emission_win()
+        # Option 3 functions
+        op3_stats_lab = tk.Label(emit).place(x=355,y=70,width=675,height=698)
+        op3_head = tk.Label(emit, text="Global Greenhouse Emission over past 20 years", font=('Bahnshcrift', 22), justify='center', bg='black', fg='orange')
+        op3_head.place(x=355, y=0, width=670, height=70)
+
+        op3_back = tk.Button(emit, text="Back", font=('Bahnshcrift', 13, 'bold'), command=back_to_emit, bg='black', bd=0, fg='white')
+        op3_back.place(x=675, y=730, width=65)
+
+    def clicked_Gge17():
+        back_to_main.destroy()
+        global_emit_20ys.config(state='disabled')
+        global_emit_2017.config(state='disabled')
+        global_Gemit_20ys.config(state='disabled')
+        big_manufac.config(state='disabled')
+        learn_more.config(state='disabled')
+        def back_to_emit():
+            emit.destroy()
+            emission_win()
+        # Option 4 functions
+        op4_stats_lab = tk.Label(emit).place(x=355,y=70,width=675,height=698)
+        op4_head = tk.Label(emit, text="Global Greenhouse Emission in 2017", font=('Bahnshcrift', 25), justify='center', bg='black', fg='orange')
+        op4_head.place(x=355, y=0, width=670, height=70)
+
+        op4_back = tk.Button(emit, text="Back", font=('Bahnshcrift', 13, 'bold'), command=back_to_emit, bg='black', bd=0, fg='white')
+        op4_back.place(x=675, y=730, width=65)
+
+    def clicked_lm20():
+        back_to_main.destroy()
+        global_emit_20ys.config(state='disabled')
+        global_Gemit_2017.config(state='disabled')
+        global_Gemit_20ys.config(state='disabled')
+        global_emit_2017.config(state='disabled')
+        learn_more.config(state='disabled')
+        def back_to_emit():
+            emit.destroy()
+            emission_win()
+        # Option 5 functions
+        op5_stats_lab = tk.Label(emit).place(x=355,y=70,width=675,height=698)
+        op5_head = tk.Label(emit, text="Largest Manufacturer over 20 years", font=('Bahnshcrift', 25), justify='center', bg='black', fg='orange')
+        op5_head.place(x=355, y=0, width=670, height=70)
+
+        op5_back = tk.Button(emit, text="Back", font=('Bahnshcrift', 13, 'bold'), command=back_to_emit, bg='black', bd=0, fg='white')
+        op5_back.place(x=675, y=730, width=65)
+
+
+
+    root.withdraw()
+    emit = tk.Toplevel()
+    emit.geometry("1024x768+300+50")
+    emit.title("Gaseous Emissions")
+    emit.resizable(False, False)
+    icon_f = tk.PhotoImage(master=emit,file='pics\\logo.png')
+    emit.iconphoto(False, icon_f)
+    background_emit = tk.PhotoImage(master=emit,file='pics\\emit_bg2.png')
+    bg_f = tk.Label(emit, image=background_emit).pack()
+    separator = tk.Frame(emit, bg='orange').place(x=350, y=0, width=5, height=768)
+
+    # Buttons on the Left-side of Window
+    global_emit_20ys = tk.Button(emit, text='GLOBAL EMISSION\nOVER PAST 20 YEARS', font=('Bahnschrift', 13),
+                                 command=clicked_ge20, bg='midnightblue',fg='white')
+    global_emit_20ys.place(x=0,y=0, width=350, height=150)
+
+    global_emit_2017 = tk.Button(emit, text='GLOBAL EMISSION IN 2017', font=('Bahnschrift', 13),bg='midnightblue',
+                                 fg='white', command=clicked_ge17)
+    global_emit_2017.place(x=0,y=150, width=350, height=150)
+
+    global_Gemit_20ys = tk.Button(emit, text='GLOBAL GREENHOUSE EMISSION\nOVER PAST 20 YEARS', font=('Bahnschrift', 13),
+                                  bg='midnightblue',fg='white', command=clicked_Gge20)
+    global_Gemit_20ys.place(x=0,y=300, width=350, height=150)
+
+    global_Gemit_2017 = tk.Button(emit, text='GLOBAL GREENHOUSE\nEMISSION IN 2017', font=('Bahnschrift', 13),
+                                  bg='midnightblue',fg='white', command=clicked_Gge17)
+    global_Gemit_2017.place(x=0,y=450, width=350, height=150)
+
+    big_manufac = tk.Button(emit, text='LARGEST MANUFACTURER OVER 20 YEARS', font=('Bahnschrift', 13),bg='midnightblue',
+                            fg='white', command=clicked_lm20)
+    big_manufac.place(x=0,y=600, width=350, height=90)
+
+    learn_more = tk.Button(emit, text='LEARN MORE', font=('Bahnschrift', 13,'bold','underline'),bg='midnightblue',
+                           fg='white', command=open_my_climate)
+    learn_more.place(x=0,y=690, width=350, height=78)
+
+
+
+    def emit_to_main():
+        emit.destroy()
+        root.iconify()
+        root.deiconify()
+
+    back_to_main = tk.Button(emit, text="Back", font=('Bahnshcrift', 13, 'bold'), command=emit_to_main, bg='gray', bd=0)
+    back_to_main.place(x=935, y=720, width=65)
+    emit.mainloop()
+
 
 
 
 # Main window (root) which will be showed when software runs
 root = tk.Tk()
-root.configure()
-root.attributes('-alpha', 0.97)
-root.geometry("1024x768")
+root.geometry("1024x768+300+50")
 root.title("Climate Action")
 root.resizable(False, False)
 
@@ -187,7 +323,7 @@ menu_top = tk.Menu(root)
 
 # 1. Preview menu option
 in_preview = tk.Menu(menu_top, tearoff=0)
-in_preview.add_command(label='Emission Rates')
+in_preview.add_command(label='Emission Rates', command=emission_win)
 in_preview.add_command(label='Predict Emissions')
 in_preview.add_command(label="Weather Forecast" , command=weather_win)
 menu_top.add_cascade(label='Preview', menu=in_preview)
