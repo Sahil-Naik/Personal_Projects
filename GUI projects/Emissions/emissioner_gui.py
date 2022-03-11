@@ -6,7 +6,7 @@ import webbrowser as wb
 import requests
 import time
 
-# Last edited on 10-March-2022 at 8:00 PM.
+# Last edited on 11-March-2022 at 5:29 PM.
 
 api_key = "0af67e362c2930a36cacadc49254293d"
 base_url = "http://api.openweathermap.org/data/2.5/forecast?"
