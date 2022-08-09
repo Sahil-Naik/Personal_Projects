@@ -1,0 +1,9 @@
+n=int(input())
+
+for i in range(65,65+n):
+    k=i
+    
+    for j in range(65,i+1):
+        print(chr(k),end="")
+        k=k+1
+    print()
