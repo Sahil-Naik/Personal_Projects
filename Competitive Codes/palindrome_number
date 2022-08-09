@@ -1,0 +1,6 @@
+num = int(input())
+temp = str(num)
+if str(num) == temp[::-1]:
+    print("True")
+else:
+    print("False")
