@@ -1,0 +1,11 @@
+num=123456789
+temp = list(str(num))
+t_e = []
+t_o = []
+for i in temp:
+    if temp.index(i) % 2 == 0:
+        t_o.append(int(i))
+    elif temp.index(i) % 2 != 0:
+        t_e.append(int(i))
+    
+print("{} {}".format(sum(t_e), sum(t_o)))
