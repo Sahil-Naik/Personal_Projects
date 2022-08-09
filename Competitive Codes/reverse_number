@@ -1,0 +1,8 @@
+num = 123654465
+temp = 0
+while num!=0:
+    t2 = num%10
+    temp = temp * 10 + t2
+    num//=10
+    
+print(temp)
