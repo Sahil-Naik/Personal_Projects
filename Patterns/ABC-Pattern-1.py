@@ -1,10 +1,13 @@
 '''
+
 For n=4
 Output:
+
 A
 AB
 ABC
 ABCD
+
 '''
 
 n = int(input())
