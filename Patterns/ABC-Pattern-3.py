@@ -10,6 +10,7 @@ BCDE
 ABCDE
 
 '''
+
 n = int(input())
 
 for i in range(64+n,64,-1):
